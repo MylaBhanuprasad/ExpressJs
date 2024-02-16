@@ -3,6 +3,8 @@ const router=express.Router();
 const path=require('path')
 const bodyParser=require('body-parser')
 
+router.use(express.static(path.join(__dirname,'../public')))
+
 router.use(bodyParser.urlencoded({extended:false}))
 router.get('/',(request,response)=>{
     
